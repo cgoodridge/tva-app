@@ -1,14 +1,11 @@
 import React, { useState, useEffect }  from 'react';
-import threatContent from './threat-content';
 import MembersList from '../components/MembersList';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 const MembersListPage = ({ match }) => {
 
-    const name = match.params.name;
-    const threat = threatContent.find(threat => threat.name === name);
-
-
-    const [members, setMembersList] = useState({ title: '', name: '', status: '', bio: ''});
+    const [members, setMembersList] = useState([]);
 
     useEffect(() => {
 
@@ -20,13 +17,18 @@ const MembersListPage = ({ match }) => {
         }
         fetchData();
         
-    }, [name]);
+    }, []);
 
     return(
     
         <>
-            <h1>Members</h1>
-            <MembersList members={members}/>
+        <Container>
+            <h1 className="pageHeader" >Members</h1>
+            <Grid container spacing={2} >
+                <MembersList members={members}/>
+            </Grid>
+        </Container>
+            
         </>
         
     )

@@ -1,9 +1,13 @@
 import React from 'react';
+import Typical from 'react-typical';
 
 const HomePage = () => (
     <>
+        <div className="heroImage">
+
+        </div>
         <div className="heroSection">
-            <h1 className="heroText">Welcome to the <br/> <span className="heroStyle">T</span>ime <span className="heroStyle">V</span>ariance <span className="heroStyle">A</span>uthority</h1>
+            <h1 className="heroText">Welcome to the <br/> <span className="heroStyle">T</span><Typical steps={['', 1000, 'ime', 1500]} loop={1} wrapper="span"/> <span className="heroStyle">V</span><Typical steps={['', 1500, 'ariance', 2000]} loop={1} wrapper="span"/> <span className="heroStyle">A</span><Typical steps={['', 2500, 'uthority', 2500]} loop={1} wrapper="span"/></h1>
         </div>
 
         <div className="videoHeading">
