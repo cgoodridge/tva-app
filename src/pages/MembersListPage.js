@@ -20,17 +20,14 @@ const MembersListPage = ({ match }) => {
     }, []);
 
     return(
-    
         <>
-        <Container>
-            <h1 className="pageHeader" >Members</h1>
-            <Grid container spacing={2} >
-                <MembersList members={members}/>
-            </Grid>
-        </Container>
-            
+            <Container>
+                <h1 className="pageHeader" >Members</h1>
+                <Grid container spacing={2} >
+                    <MembersList members={members}/>
+                </Grid>
+            </Container>
         </>
-        
     )
 }
 
