@@ -22,6 +22,7 @@ const MemberList = ({ members }) => (
                 <Typography variant="h5" component="h2" className="cardText">
                     {member.position}
                 </Typography>
+                <div className="textPanel"></div>
             </Card>
         </Grid>
         
